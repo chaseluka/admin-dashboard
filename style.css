@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@500&display=swap');
+
 :root{
    
 }
 
+* {
+    font-family: 'Anek Bangla', sans-serif;
+}
+
 body {
     width: 100%;
-    height: 100vh;
+    height: min(100%, 100vh);
     margin: 0;
 }
 
@@ -12,7 +18,7 @@ body {
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template: 1fr 4fr / 1fr 4fr;
+    grid-template: 1fr 5fr / 1fr 4fr;
 }
 
 .sidebar-container {
@@ -69,19 +75,136 @@ li {
 
 .header {
     grid-area: 1 / 2 / 2 / 3;
-    width: 100%;
-    height: 100%;
     background-color: brown;
-
+    display: grid;
+    grid-template: 1fr 2fr / 1.5fr 1fr;
+    padding: 15px;
 }
 
-.profile-picture-small, .profile-picture-large{
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+    padding-left: max(20px, 5%);
+    gap: clamp(5px, 0.7vw , 18px);
+}
+
+.searchbar input {
+    -webkit-appearance: none;
+    width: clamp(150px, 40vw, 600px);
+    height: 26px;
+    border: none;
+    border-radius: 30px;
+    background-color: gray;
+    padding: 1px 4px 1px 10px;
+}
+
+.searchbar input:focus{
+    outline: none;
+    border: 1px solid black;
+}
+
+.top-right {
+    display: flex;
+    gap: max(10px, 2.5vw);
+    align-items: center;
+    justify-self: end;
+    padding-right: 9%;
+}
+
+.top-right img {
+    flex: 0;
+    height: 24px;
+}
+
+.bottom-left {
+    display: flex;
+    align-items: flex-end;
+    gap: max(10px, 1vw);
+    padding-left: max(25px, 6%);
+}
+
+.bottom-left-profile-info {
+    vertical-align: bottom;
+}
+
+.hi-there {
+    font-size: 15px;
+}
+
+.profile-name {
+    font-size: max(18px, 1.5vw);
+}
+
+.profile-picture-large {
+    height: 60px;
+    width: 60px;
+    background-color: black;
+}
+
+.profile-picture-small  {
     height: 30px;
     width: 30px;
     background-color: black;
 }
 
+.bottom-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding-right: 9%;
+    padding-top: 4%;
+}
+
+.bottom-right button {
+    appearance: none;
+    outline: none;
+    border: none;
+    padding: 7px 0px;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #fff;
+    background-color: blue;
+    max-height: 40px;
+    width: 105px;
+    
+}
+
 .main-container {
     grid-area: 2 / 2 / 3 / 3;
     background-color: gray;
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 1fr;
+}
+
+.projects-container {
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.annoucements-container {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.trending-container {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.projects {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+.main div{
+    width: 200px;
+    min-height: 200px;
+    background-color: aliceblue;
 }
