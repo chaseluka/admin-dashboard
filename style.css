@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@500&display=swap');
 
 :root{
-   
+   --white: #fafaf9;
+   --off-white: #e7e5e4;
+   --light-gray: #a8a29e;
+   --stone: #787176;
+   --stone-dark: #57534e;
+   --dark-gray: #44403c;
+   --light-black: #292524;
+   --black: #1c1917;
 }
 
 * {
@@ -176,6 +183,8 @@ li {
     background-color: gray;
     display: grid;
     grid-template: 1fr 1fr / 3fr 1fr;
+    padding: 35px 35px 0 25px;
+    gap: 30px;
 }
 
 .projects-container {
@@ -190,7 +199,7 @@ li {
     grid-area: 2 / 2 / 3 / 3;
 }
 
-.projects, .announcements-header, .trending-header {
+.projects-header, .announcements-header, .trending-header {
     font-size: 20px;
     font-weight: bold;
 }
@@ -199,20 +208,63 @@ li {
     display: grid;
     gap: 20px;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 
-.main div{
-    width: 200px;
-    min-height: 200px;
-    background-color: aliceblue;
+.main > div{
+    height: 214px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    border-radius: 15px;
+}
+
+.projects > div:last-child {
+    display: grid;
+}
+
+.projects-side {
+    background-color: black;
+    min-width: 10px;
+    max-width: 10px;
+    border-radius: 15px 0 0 15px;
+}
+
+.projects-main {
+    background-color: white;
+    border-radius: 0 15px 15px 0;
+    padding: 25px;
+}
+
+.projects-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 100%;
+    
+}
+
+.projects-text {
+    font-size: 17px;
+    color: gray;
+    line-height: 130%;
+}
+
+.projects-icons {
+    padding-top: 10px;
+    align-self: end;
+    justify-self: end;
+    display: flex;
+    gap: 30px;
+    
 }
 
 .announcements, .trending-items {
     background-color: white;
     border-radius: 15px; 
-    padding: 25px;
+    padding: 30px;
+    box-shadow: 3px 3px #666;
+    min-width: 217px;
 }
 
 .announcements {
@@ -240,4 +292,36 @@ li {
     -webkit-box-orient: vertical;  
     overflow: hidden;
     
+}
+
+.trending-items {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.trending-items > * {
+    display: grid;
+    grid-template: repeat(2, 0.5fr) / 1fr 3fr;
+    gap: 5px;
+}
+
+.trending-items > * > .profile-picture-small {
+    grid-area: 1 / 1 / 3 / 2;
+    align-self: center;
+}
+
+.trending-name {
+    font-size: 16px;
+    font-weight: bold;
+    align-self: end;
+    line-height: 99%;
+}
+
+.trending-description {
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 15px;
+    color: gray;
+    align-self: start;
+    line-height: 100%;
 }
