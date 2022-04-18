@@ -182,7 +182,7 @@ li {
     grid-area: 1 / 1 / 3 / 2;
 }
 
-.annoucements-container {
+.announcements-container {
     grid-area: 1 / 2 / 2 / 3;
 }
 
@@ -190,7 +190,7 @@ li {
     grid-area: 2 / 2 / 3 / 3;
 }
 
-.projects {
+.projects, .announcements-header, .trending-header {
     font-size: 20px;
     font-weight: bold;
 }
@@ -207,4 +207,37 @@ li {
     width: 200px;
     min-height: 200px;
     background-color: aliceblue;
+}
+
+.announcements, .trending-items {
+    background-color: white;
+    border-radius: 15px; 
+    padding: 25px;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcements-one, .announcements-two  {
+    padding-bottom: 20px;
+    border-bottom: 0.2px solid gray;
+}
+
+.announcements-title {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.announcements-text {
+    font-size: 13px;
+    color: gray;
+    line-height: 98%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    
 }
